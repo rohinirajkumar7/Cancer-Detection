@@ -1,0 +1,74 @@
+.app {
+  min-height: 100vh;
+  background: url("../public/background-image.png") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+
+.card {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  width: 450px;
+  max-width: 90%;
+  border-radius: 16px;
+  color: #e8f6ff;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+}
+
+
+h1 {
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #b8dfff;
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  background: #eef7ff;
+  color: #033;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #556;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #00ffcc;
+}
+
+.error {
+  color: #ff7a7a;
+  margin-top: 12px;
+}
