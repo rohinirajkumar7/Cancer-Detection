@@ -267,8 +267,4 @@ These files are generated or installed locally.
 - Add prediction confidence score
 - Improve UI and visualization
 
----
 
-## License
-
-This project is intended for educational and learning purposes.
