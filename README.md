@@ -1,11 +1,11 @@
-# 🧬 Cancer Detection System  
+#  Cancer Detection System  
 **AI-powered Early Cancer Risk Prediction Web Application**
 
 An end-to-end Machine Learning web application that predicts the likelihood of cancer using lifestyle, genetic, and health indicators. The system uses a trained ML model deployed via a Flask API and a modern React frontend for real-time prediction.
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 - Machine Learning–based cancer risk prediction  
 - Real-time inference via Flask REST API  
 - Modern React UI with responsive design  
@@ -14,7 +14,7 @@ An end-to-end Machine Learning web application that predicts the likelihood of c
 
 ---
 
-## 🧠 Machine Learning Model
+##  Machine Learning Model
 The model is trained on health and genetic indicators such as:
 - Age  
 - Gender  
@@ -33,7 +33,7 @@ These are used by the Flask API for real-time predictions.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 | Layer | Technology |
 |------|-----------|
 | Frontend | React.js, CSS |
@@ -44,7 +44,7 @@ These are used by the Flask API for real-time predictions.
 
 ---
 
-## ⚙️ Project Structure
+##  Project Structure
 ```
 cancer-detection/
 │
@@ -72,9 +72,9 @@ cancer-detection/
 ```
 ---
 
-## ▶️ How to Run the Project
+##  How to Run the Project
 
-### 1️⃣ Start Backend (Flask)
+### 1️ Start Backend (Flask)
 ```
 cd backend
 venv\Scripts\activate
@@ -87,7 +87,7 @@ http://127.0.0.1:5000
 
 ---
 
-### 2️⃣ Start Frontend (React)
+### 2️ Start Frontend (React)
 ```
 cd frontend
 npm install
@@ -100,7 +100,7 @@ http://localhost:3000
 
 ---
 
-## 🔄 How It Works
+##  How It Works
 1. User enters health details in the web UI  
 2. React sends data to Flask API  
 3. Data is scaled using `scaler.pkl`  
@@ -109,7 +109,7 @@ http://localhost:3000
 
 ---
 
-## 📊 Output
+##  Output
 The system returns:
 - **Cancer Detected**
 - **No Cancer Detected**
@@ -118,7 +118,7 @@ Based on the trained Machine Learning model.
 
 ---
 
-## 🎯 Use Cases
+##  Use Cases
 - Medical decision support  
 - Early cancer screening systems  
 - AI in healthcare demonstrations  
@@ -126,7 +126,7 @@ Based on the trained Machine Learning model.
 
 ---
 
-## 🧪 Validation Logic
+##  Validation Logic
 The system validates inputs to prevent unrealistic values:
 - Age: 0 – 120  
 - BMI: 10 – 60  
@@ -137,7 +137,7 @@ This ensures meaningful predictions.
 
 ---
 
-## 📌 Why This Project is Strong
+##  Why This Project is Strong
 This project demonstrates:
 - Full-stack AI integration  
 - Machine learning deployment  
@@ -146,7 +146,3 @@ This project demonstrates:
 - Professional UI/UX  
 
 ---
-
-## 👩‍💻 Author
-**Rohini R**  
-Computer Science & Engineering Student  
