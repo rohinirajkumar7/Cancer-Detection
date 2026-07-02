@@ -1,18 +1,18 @@
 # Cancer Detection Using Machine Learning
 
-A full-stack machine learning application that predicts cancer diagnosis using genomic features. The project combines a React frontend with a Flask backend, where a trained K-Nearest Neighbors (KNN) model performs predictions based on user input.
+A full-stack machine learning application that predicts cancer diagnosis using genomic features. The application combines a React frontend with a Flask backend, where a trained K-Nearest Neighbors (KNN) model performs predictions using user-provided input.
 
 ---
 
 ## Overview
 
-This application demonstrates the complete workflow of a machine learning project:
+This project demonstrates an end-to-end machine learning workflow, including:
 
 - Data preprocessing
-- Model training
+- Machine learning model training
 - Model serialization
-- REST API using Flask
-- Interactive React frontend
+- Flask REST API
+- React frontend
 - Real-time cancer prediction
 
 ---
@@ -24,30 +24,7 @@ This application demonstrates the complete workflow of a machine learning projec
 - Flask REST API
 - React-based user interface
 - Data preprocessing with StandardScaler
-- Model persistence using Joblib
-
----
-
-## Project Structure
-
-```
-Cancer-Detection
-│
-├── backend
-│   ├── app.py
-│   ├── model.py
-│   ├── genomic_data.csv
-│   ├── requirements.txt
-│   └── ...
-│
-├── frontend
-│   ├── package.json
-│   ├── public
-│   ├── src
-│   └── ...
-│
-└── README.md
-```
+- Model serialization using Joblib
 
 ---
 
@@ -72,20 +49,53 @@ Cancer-Detection
 
 ---
 
+## Project Structure
+
+```text
+cancer-detection/
+│
+├── backend/
+│   │
+│   ├── app.py                 # Flask API
+│   ├── model.py               # Model training script
+│   ├── genomic_data.csv       # Dataset
+│   ├── cancer_model.pkl       # Generated after training (not included)
+│   ├── scaler.pkl             # Generated after training (not included)
+│   └── venv/                  # Virtual environment (not included)
+│
+└── frontend/
+    │
+    ├── public/
+    │   ├── index.html
+    │   ├── favicon.ico
+    │   └── background-image.png
+    │
+    ├── src/
+    │   ├── App.js
+    │   ├── App.css
+    │   └── index.js
+    │
+    ├── package.json
+    └── package-lock.json
+```
+
+---
+
 ## Installation
 
-### 1. Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/rohinirajkumar7/Cancer-Detection.git
+
 cd Cancer-Detection
 ```
 
 ---
 
-## Backend Setup
+# Backend Setup
 
-Navigate to the backend directory.
+Navigate to the backend folder.
 
 ```bash
 cd backend
@@ -107,32 +117,30 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-Install the required packages.
+Install the required Python packages.
 
 ```bash
-pip install -r requirements.txt
+pip install Flask Flask-Cors pandas scikit-learn joblib
 ```
 
 ---
 
 ## Generate the Machine Learning Model
 
-This repository intentionally does **not** include:
+The following files are **not included** in this repository:
 
-- `cancer_model.pkl`
-- `scaler.pkl`
+- cancer_model.pkl
+- scaler.pkl
 
-These files are generated locally.
-
-Run:
+Generate them by running:
 
 ```bash
 python model.py
 ```
 
-This will generate:
+This will create:
 
-```
+```text
 backend/
 ├── cancer_model.pkl
 └── scaler.pkl
@@ -140,13 +148,13 @@ backend/
 
 ---
 
-## Start the Backend
+## Start the Backend Server
 
 ```bash
 python app.py
 ```
 
-The Flask server will start on:
+The Flask server will start at:
 
 ```
 http://127.0.0.1:5000
@@ -154,15 +162,17 @@ http://127.0.0.1:5000
 
 ---
 
-## Frontend Setup
+# Frontend Setup
 
 Open a new terminal.
+
+Navigate to the frontend directory.
 
 ```bash
 cd frontend
 ```
 
-Install dependencies.
+Install Node.js dependencies.
 
 ```bash
 npm install
@@ -174,7 +184,7 @@ Start the React application.
 npm start
 ```
 
-The frontend will run on:
+The frontend will run at:
 
 ```
 http://localhost:3000
@@ -182,9 +192,9 @@ http://localhost:3000
 
 ---
 
-## Workflow
+## Application Workflow
 
-```
+```text
 User Input
       │
       ▼
@@ -203,15 +213,16 @@ KNN Model
 Prediction
       │
       ▼
-Return Result
+Display Result
 ```
 
 ---
 
-## Model Information
+## Machine Learning Model
 
+| Component | Description |
+|-----------|-------------|
 | Algorithm | K-Nearest Neighbors (KNN) |
-|------------|---------------------------|
 | Language | Python |
 | Framework | Scikit-learn |
 | Backend | Flask |
@@ -221,42 +232,40 @@ Return Result
 
 ## Dataset
 
-The project uses a genomic dataset stored in:
+The model is trained using the genomic dataset located at:
 
-```
+```text
 backend/genomic_data.csv
 ```
 
-The dataset is used to train the KNN classifier.
-
 ---
 
-## Files Not Included
+## Files Excluded from GitHub
 
-To keep the repository lightweight, the following files are excluded from GitHub:
+To keep the repository lightweight, the following files are intentionally excluded:
 
+```text
+backend/
+├── venv/
+├── cancer_model.pkl
+└── scaler.pkl
+
+frontend/
+└── node_modules/
 ```
-backend/venv/
-backend/cancer_model.pkl
-backend/scaler.pkl
-frontend/node_modules/
-```
 
-Generate the model locally by running:
-
-```bash
-python model.py
-```
+These files are generated or installed locally.
 
 ---
 
 ## Future Improvements
 
-- Support multiple ML algorithms
+- Compare multiple machine learning algorithms
+- Improve model accuracy
 - Deploy using Docker
-- Cloud deployment on Render or Railway
-- Model performance comparison
-- Improved visualization dashboard
+- Deploy on Render or Railway
+- Add prediction confidence score
+- Improve UI and visualization
 
 ---
 
